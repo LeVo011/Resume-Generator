@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h1>Resume Generator</h1>
+      <form id="resumeForm">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="Enter your Name" />
+
+        <label for="jobTitle">Job Title</label>
+        <input type="text" id="jobTitle" placeholder="who are you?" />
+
+        <label for="summary">Summary</label>
+        <textarea id="summary" placeholder="A brief story about your career journey..."></textarea>
+
+        <label for="skills">Skills (comma separated)</label>
+        <input type="text" id="skills" placeholder="" />
+
+        <button type="submit">Update Preview</button>
+      </form>
+    </div>
+    <div class="preview-container">
+      <h2>Live Preview</h2>
+      <div class="resume-preview" id="resumePreview">
+        <h1 id="previewName">Your Name</h1>
+        <h3 id="previewJob">Job Title</h3>
+        <p id="previewSummary">Your professional summary will appear here.</p>
+        <ul id="previewSkills">
+          <li>Skill 1</li>
+          <li>Skill 2</li>
+        </ul>
+      </div>
+      <button id="downloadBtn">Download PDF</button>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
